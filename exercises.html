@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Exercises</title>
+    <script>
+        // Exercise 1: Baggage Weight Check
+        function doIt1() {
+            let x = document.getElementById("bw").value;
+            if (x > 15) {
+                alert("Your baggage is overweight!");
+            } else {
+                alert("Your baggage is within the weight limit.");
+            }
+        }
+
+        // Exercise 2: Sum of Multiples of 3 or 5 Below 1000
+        function doIt2() {
+            let sum = 0;
+            for (let i = 0; i < 1000; i++) {
+                if (i % 3 === 0 || i % 5 === 0) {
+                    sum += i;
+                }
+            }
+            alert("The sum of multiples of 3 or 5 below 1000 is: " + sum);
+        }
+
+        // Exercise 3: Sum of Multiples of a or b Below n
+        function doIt3() {
+            let a = parseInt(document.getElementById("a").value);
+            let b = parseInt(document.getElementById("b").value);
+            let n = parseInt(document.getElementById("n").value);
+            let sum = 0;
+
+            for (let i = 0; i < n; i++) {
+                if (i % a === 0 || i % b === 0) {
+                    sum += i;
+                }
+            }
+            alert("The sum of multiples of " + a + " or " + b + " below " + n + " is: " + sum);
+        }
+
+        // Exercise 4: Sum of Multiples in Array
+        function f4(a, b, l) {
+            let sum = 0;
+            for (let i = 0; i < l.length; i++) {
+                if (l[i] % a === 0 || l[i] % b === 0) {
+                    sum += l[i];
+                }
+            }
+            return sum;
+        }
+
+        function doIt4() {
+            let a = parseInt(document.getElementById("a4").value);
+            let b = parseInt(document.getElementById("b4").value);
+            let l = document.getElementById("l4").value.split(',').map(Number);
+            let result = f4(a, b, l);
+            alert("The sum of multiples of " + a + " or " + b + " in the array is: " + result);
+        }
+
+        // Exercise 5: Sum of Multiples from Array of Factors
+        function f5(a, l) {
+            let sum = 0;
+            for (let i = 0; i < l.length; i++) {
+                if (l[i] % a[0] === 0 || l[i] % a[1] === 0) {
+                    sum += l[i];
+                }
+            }
+            return sum;
+        }
+
+        function doIt5() {
+            let a = document.getElementById("a5").value.split(',').map(Number);
+            let l = document.getElementById("l5").value.split(',').map(Number);
+            let result = f5(a, l);
+            alert("The sum of multiples of factors in the array is: " + result);
+        }
+
+        // Exercise 6: Sum of Multiples for Factors in Array
+        function f6(a, l) {
+            let sum = 0;
+            for (let i = 0; i < l.length; i++) {
+                if (a.some(factor => l[i] % factor === 0)) {
+                    sum += l[i];
+                }
+            }
+            return sum;
+        }
+
+        function doIt6() {
+            let a = document.getElementById("a6").value.split(',').map(Number);
+            let l = document.getElementById("l6").value.split(',').map(Number);
+            let result = f6(a, l);
+            alert("The sum of multiples in the array for factors in a is: " + result);
+        }
+
+        // Exercise 7: Calculate Basket Cost
+        function f7(basket, prices) {
+            let total = 0;
+            for (let product in basket) {
+                if (prices[product]) {
+                    total += basket[product] * prices[product];
+                }
+            }
+            return total;
+        }
+
+        function doIt7() {
+            let basket = JSON.parse(document.getElementById("basket").value);
+            let prices = JSON.parse(document.getElementById("prices").value);
+            let total = f7(basket, prices);
+            alert("The total cost is: $" + total);
+        }
+    </script>
+</head>
+<body>
+    <h1>JavaScript Exercises</h1>
+
+    <!-- Exercise 1: Baggage Weight Check -->
+    <p>Exercise 1: Baggage Weight Check</p>
+    <p>Please enter your baggage weight:</p>
+    <input type="text" id="bw" width="6">
+    <button onclick="doIt1()">Submit</button>
+
+    <!-- Exercise 2: Sum of Multiples of 3 or 5 Below 1000 -->
+    <p>Exercise 2: Sum of Multiples of 3 or 5 Below 1000</p>
+    <button onclick="doIt2()">Press me!</button>
+
+    <!-- Exercise 3: Sum of Multiples of a or b Below n -->
+    <p>Exercise 3: Sum of Multiples of a or b Below n</p>
+    <input type="text" id="a" placeholder="a">
+    <input type="text" id="b" placeholder="b">
+    <input type="text" id="n" placeholder="n">
+    <button onclick="doIt3()">Press me!</button>
+
+    <!-- Exercise 4: Sum of Multiples in Array -->
+    <p>Exercise 4: Sum of Multiples in Array</p>
+    <input type="text" id="a4" placeholder="a">
+    <input type="text" id="b4" placeholder="b">
+    <input type="text" id="l4" placeholder="Array (comma separated)">
+    <button onclick="doIt4()">Press me!</button>
+
+    <!-- Exercise 5: Sum of Multiples from Array of Factors -->
+    <p>Exercise 5: Sum of Multiples from Array of Factors</p>
+    <input type="text" id="a5" placeholder="a (comma separated)">
+    <input type="text" id="l5" placeholder="Array (comma separated)">
+    <button onclick="doIt5()">Press me!</button>
+
+    <!-- Exercise 6: Sum of Multiples for Factors in Array -->
+    <p>Exercise 6: Sum of Multiples for Factors in Array</p>
+    <input type="text" id="a6" placeholder="a (comma separated)">
+    <input type="text" id="l6" placeholder="Array (comma separated)">
+    <button onclick="doIt6()">Press me!</button>
+
+    <!-- Exercise 7: Calculate Basket Cost -->
+    <p>Exercise 7: Calculate Basket Cost</p>
+    <textarea id="basket" placeholder="Enter basket in JSON format"></textarea><br>
+    <textarea id="prices" placeholder="Enter prices in JSON format"></textarea><br>
+    <button onclick="doIt7()">Calculate Cost</button>
+</body>
+</html>
