@@ -96,23 +96,23 @@
             alert("The sum of multiples in the array for factors in a is: " + result);
         }
 
-        // Exercise 7: Calculate Basket Cost
-        function f7(basket, prices) {
-            let total = 0;
-            for (let product in basket) {
-                if (prices[product]) {
-                    total += basket[product] * prices[product];
-                }
-            }
-            return total;
-        }
+        
 
-        function doIt7() {
-            let basket = JSON.parse(document.getElementById("basket").value);
-            let prices = JSON.parse(document.getElementById("prices").value);
-            let total = f7(basket, prices);
-            alert("The total cost is: $" + total);
+        // Exercise 7: Calculate Basket Cost
+        function f7(basket, prices)    getCost(prices) {
+        // Calculates the total cost based on a price object
+        let totalCost = 0;
+        for (let product in this.items) {
+            if (prices[product] !== undefined) {
+                totalCost += prices[product] * this.items[product];
+            } else {
+                console.warn(`Warning: ${product} has no price set.`);
+            }
         }
+        return totalCost;
+    }
+}
+
     </script>
 </head>
 <body>
