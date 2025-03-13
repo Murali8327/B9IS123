@@ -10,3 +10,21 @@ Update: Edit existing product details.
 
 Delete: Remove products from the store.
 
+Features
+
+User-friendly interface
+
+Bootstrap for responsive design
+
+Form inputs for Product ID, Product Name, Seller, and Price
+
+Readonly field for Product ID
+
+Technologies Used
+
+HTML
+
+Bootstrap
+
+Font Awesome 
+
