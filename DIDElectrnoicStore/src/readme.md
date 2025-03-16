@@ -10,7 +10,7 @@ Update: Edit existing product details.
 
 Delete: Remove products from the store.
 
-Features
+# Features
 
 User-friendly interface
 
@@ -20,11 +20,14 @@ Form inputs for Product ID, Product Name, Seller, and Price
 
 Readonly field for Product ID
 
-Technologies Used
+# Technologies Used
 
 HTML
-
 Bootstrap
-
 Font Awesome 
+
+# File Structure
+- **index.html**: Main HTML file for the structure of the application.
+- **style.css**: Custom CSS for additional styling.
+- **main.js**: JavaScript file for database operations and app functionality.
 
