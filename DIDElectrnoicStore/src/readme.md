@@ -31,3 +31,20 @@ Font Awesome
 - **style.css**: Custom CSS for additional styling.
 - **main.js**: JavaScript file for database operations and app functionality.
 
+# How to Use
+Setup: Make sure you're connected to the internet, as some features rely on external libraries fetched from online sources.
+
+Getting Started: Launch the index.html file in any modern web browser.
+
+What You Can Do:
+Use the input fields to manage product information.
+
+The buttons let you perform different actions:
+Create: Add new product details.
+
+Read: View a list of all products saved.
+
+Update: Edit the information of an existing product.
+
+Delete All: Clear all product records from the database
+
