@@ -1,4 +1,10 @@
 body {
+    .background {
+        background-image: url('bg-img.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
     box-sizing: border-box;
 }
 
@@ -44,5 +50,6 @@ table .btndelete {
 
     100% {
         top: -40px;
+
     }
 }
