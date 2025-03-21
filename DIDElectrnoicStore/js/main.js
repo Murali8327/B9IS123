@@ -7,3 +7,5 @@ let db=productdb("Productdb", {
   //input tags
 const userid=document.getElementById("userid");
 const proname=document.getElementById("proname");
+const seller=document.getElementById("seller");
+const price=document.getElementById("price");
