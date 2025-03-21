@@ -12,3 +12,6 @@ const price=document.getElementById("price");
 //buttons
 const btncreate=document.getElementById("btncreate");
 const btnread=document.getElementById("btnread");
+const btnupdate=document.getElementById("btnupdate");
+const btndelete=document.getElementById("btndelete");
+
