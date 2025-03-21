@@ -11,7 +11,7 @@ const productdb = (dbname, table)=>{
 //     console.error("Failed to open DB:", err);
 // });
 
-// // Add data to test if it works
+// // Add data to test if it works 
 // db.friends.put({ name: 'John', age: 25 }).then(() => {
 //     console.log("Data added successfully!");
 // });
