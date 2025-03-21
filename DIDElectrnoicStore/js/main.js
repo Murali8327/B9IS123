@@ -9,3 +9,6 @@ const userid=document.getElementById("userid");
 const proname=document.getElementById("proname");
 const seller=document.getElementById("seller");
 const price=document.getElementById("price");
+//buttons
+const btncreate=document.getElementById("btncreate");
+const btnread=document.getElementById("btnread");
