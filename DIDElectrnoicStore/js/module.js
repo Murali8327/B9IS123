@@ -23,6 +23,11 @@ db.open();
 
 return db;
 }
+//insert function
+const bulkcreate =(dbtable,data)=>{
+    dbtable.bulkAdd([data]);
+}
+
 
 
 export default productdb;
