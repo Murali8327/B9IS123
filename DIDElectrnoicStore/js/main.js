@@ -1,5 +1,7 @@
 
-import productdb from "./module";
+import productdb,{
+  bulkcreate
+} from "./module";
 
 let db=productdb("Productdb", {
     products: '++id, name, seller, price'
@@ -12,6 +14,6 @@ const price=document.getElementById("price");
 //buttons
 const btncreate=document.getElementById("btncreate");
 const btnread=document.getElementById("btnread");
-const btnupdate=document.getElementById("btnupdate");
+const btnupdate=document.getElementById(" btnupdate");
 const btndelete=document.getElementById("btndelete");
 

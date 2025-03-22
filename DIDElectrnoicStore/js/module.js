@@ -27,7 +27,22 @@ return db;
 const bulkcreate =(dbtable,data)=>{
     dbtable.bulkAdd([data]);
 }
+//check textbox validation
+const empty=object=>{
+    let flag=false;
+    for(const value in object){
+        if(object[value]!=""&&object.hasOwnProperty(value)){
+            flag=true;
+        }else{
+            flag=false; 
+        }
+    }
+    return flag;
+}
 
 
 
 export default productdb;
+export{
+    bulkcreate 
+}
