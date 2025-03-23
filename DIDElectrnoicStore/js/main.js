@@ -27,6 +27,8 @@ btncreate.onclick=event=>{
   console.log(flag);
 }
 // Notes:
+
+// Relaxed Binding
 // Camel case : btnCreate
 // Snake cae : btn_create
 // kebab case : btn-create
