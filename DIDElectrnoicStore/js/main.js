@@ -26,4 +26,9 @@ btncreate.onclick=event=>{
   })
   console.log(flag);
 }
+// Notes:
+// Camel case : btnCreate
+// Snake cae : btn_create
+// kebab case : btn-create
+// snakeupper : btn_Create
 
