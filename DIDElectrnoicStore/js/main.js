@@ -1,9 +1,9 @@
 
-import productdb,{
+import prodb,{
   bulkcreate
-} from "./module";
+} from "./module.js";
 
-let db=productdb("Productdb", {
+let db = prodb("Productdb", {
     products: '++id, name, seller, price'
   } );
   //input tags
@@ -12,17 +12,18 @@ const proname=document.getElementById("proname");
 const seller=document.getElementById("seller");
 const price=document.getElementById("price");
 //buttons
-const btncreate=document.getElementById("btncreate");
-const btnread=document.getElementById("btnread");
-const btnupdate=document.getElementById(" btnupdate");
-const btndelete=document.getElementById("btndelete");
+const btncreate=document.getElementById("btn-create");
+const btnread=document.getElementById("btn-read");
+const btnupdate=document.getElementById(" btn-update");
+const btndelete=document.getElementById("btn-delete");
 
 //insert value using create button
-btncreate.onclick=(event)=>{
+btncreate.onclick=event=>{
  let flag= bulkcreate(db.products,{
-    name:proname.value,
-    seller:seller,value,
-    price:price.value,
+    name: proname.value,
+    seller: seller.value,
+    price: price.value
   })
   console.log(flag);
 }
+

@@ -16,7 +16,7 @@ const productdb = (dbname, table)=>{
 //     console.log("Data added successfully!");
 // });
 
-const db = Dexie(dbname);
+const db = new Dexie(dbname);
 db.version(1).stores(table);
 
 db.open();
@@ -25,7 +25,16 @@ return db;
 }
 //insert function
 const bulkcreate =(dbtable,data)=>{
-    dbtable.bulkAdd([data]);
+    // dbtable.bulkAdd([data]);
+    let flag = empty(data);
+    if(flag){
+        dbtable.bulkAdd([data]);
+        console.log("data inserted successfully");
+    }else{
+      console.log("Provide Data");
+    }
+
+    return flag;
 }
 //check textbox validation
 const empty=object=>{
