@@ -34,32 +34,6 @@ btncreate.onclick=event=>{
  getData();
 }
 
-const getData=()=>{
-  let index=0;
-  let obj={};
-
-  db.products.count((count)=>{
-    if(count){
-      db.products.each(table=>{
-console.log(table);
-
-obj=Sortobj(table)
-console.log(obj);
-  })
-}
-  })
-
-}
-const Sortobj=sortobj=>{
-  let obj={};
-  obj={
-    id:sortobj.id,
-    name:sortobj.name,
-    seller:sortobj.seller,
-    price:sortobj.price,
-  }
-   return obj;
-}
 
 // Notes:
 

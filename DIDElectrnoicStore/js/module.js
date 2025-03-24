@@ -36,6 +36,35 @@ const bulkcreate =(dbtable,data)=>{
 
     return flag;
 }
+//get data from database
+const getData=()=>{
+    let index=0;
+    let obj={};
+  
+    db.products.count((count)=>{
+      if(count){
+        db.products.each(table=>{
+  console.log(table);
+  
+  //sort object
+  obj=Sortobj(table)
+  console.log(obj);
+    })
+  }
+    })
+  
+  }
+  const Sortobj=sortobj=>{
+    let obj={};
+    obj={
+      id:sortobj.id,
+      name:sortobj.name,
+      seller:sortobj.seller,
+      price:sortobj.price,
+    }
+     return obj;
+  }
+  
 //check textbox validation
 const empty=object=>{
     let flag=false;
