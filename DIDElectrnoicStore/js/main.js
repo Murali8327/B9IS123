@@ -39,7 +39,11 @@ const getData=()=>{
   let obj={};
 
   db.products.count((count)=>{
-console.log(count);
+    if(count){
+      db.products.each(table=>{
+console.log(table);
+  })
+}
   })
 
 }
@@ -52,5 +56,5 @@ console.log(count);
 // kebab case : btn-create
 // snakeupper : btn_Create
 
-//
+
 
