@@ -37,23 +37,24 @@ const bulkcreate =(dbtable,data)=>{
     return flag;
 }
 //get data from database
-const getData=()=>{
+const getData=(dbtable)=>{
     let index=0;
     let obj={};
   
-    db.products.count((count)=>{
+    dbtable.count((count)=>{
       if(count){
-        db.products.each(table=>{
-  console.log(table);
+        dbtable.each(table=>{
+            
+
+            obj=Sortobj(table);
+            
+ 
+    })
+  }
+    })
   
+  }
   //sort object
-  obj=Sortobj(table)
-  console.log(obj);
-    })
-  }
-    })
-  
-  }
   const Sortobj=sortobj=>{
     let obj={};
     obj={
