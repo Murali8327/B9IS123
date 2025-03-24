@@ -42,10 +42,23 @@ const getData=()=>{
     if(count){
       db.products.each(table=>{
 console.log(table);
+
+obj=Sortobj(table)
+console.log(obj);
   })
 }
   })
 
+}
+const Sortobj=sortobj=>{
+  let obj={};
+  obj={
+    id:sortobj.id,
+    name:sortobj.name,
+    seller:sortobj.seller,
+    price:sortobj.price,
+  }
+   return obj;
 }
 
 // Notes:
