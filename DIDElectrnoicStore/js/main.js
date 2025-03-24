@@ -25,7 +25,25 @@ btncreate.onclick=event=>{
     price: price.value
   })
   console.log(flag);
+
+  /*proname.value="";
+  seller.value="";
+  price.value="";
+  */
+ proname.value=seller.value=price.value="",
+ getData();
 }
+
+const getData=()=>{
+  let index=0;
+  let obj={};
+
+  db.products.count((count)=>{
+console.log(count);
+  })
+
+}
+
 // Notes:
 
 // Relaxed Binding
@@ -33,4 +51,6 @@ btncreate.onclick=event=>{
 // Snake cae : btn_create
 // kebab case : btn-create
 // snakeupper : btn_Create
+
+//
 
