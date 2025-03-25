@@ -37,7 +37,7 @@ const bulkcreate =(dbtable,data)=>{
     return flag;
 }
 //get data from database
-const getData=(dbtable)=>{
+const getData=(dbtable,fn)=>{
     let index=0;
     let obj={};
   
@@ -47,9 +47,12 @@ const getData=(dbtable)=>{
             
 
             obj=Sortobj(table);
+            fn(obj,index++);
             
  
     })
+  }else{
+    fn(0);
   }
     })
   
@@ -83,5 +86,6 @@ const empty=object=>{
 
 export default productdb;
 export{
-    bulkcreate 
+    bulkcreate,
+    getData
 }

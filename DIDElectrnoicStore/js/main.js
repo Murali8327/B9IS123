@@ -31,7 +31,9 @@ btncreate.onclick=event=>{
   price.value="";
   */
  proname.value=seller.value=price.value="",
- getData();
+ getData(db.products,(data)=>{
+  userid.value=data.id+1||1;
+ });
 }
 
 
