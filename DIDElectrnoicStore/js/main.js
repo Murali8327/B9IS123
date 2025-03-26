@@ -38,8 +38,9 @@ btncreate.onclick= async event=>{
 
   
  }); 
-};
-
+}
+//create event on btn read button
+btnread.onclick=table;
 
 // Notes:
 
