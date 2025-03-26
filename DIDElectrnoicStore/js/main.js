@@ -43,7 +43,10 @@ btncreate.onclick= async event=>{
 btnread.onclick=table;
 
 function table(){
+  const tbody=document.getElementById("tbody");
   let td=document.createElement("td");
+  console.log(tbody);
+  tbody.appendChild(td);
   console.log(td);
 }
 
