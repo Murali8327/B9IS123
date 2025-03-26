@@ -42,6 +42,11 @@ btncreate.onclick= async event=>{
 //create event on btn read button
 btnread.onclick=table;
 
+function table(){
+  let td=document.createElement("td");
+  console.log(td);
+}
+
 // Notes:
 
 // Relaxed Binding
