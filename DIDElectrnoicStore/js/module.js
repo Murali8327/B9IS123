@@ -50,13 +50,13 @@ const getData=(dbtable,fn)=>{
             fn(obj,index++);
             
  
-    })
+    });
   }else{
     fn(0);
   }
-    })
+    });
   
-  }
+  };
   //sort object
   const Sortobj=sortobj=>{
     let obj={};

@@ -1,6 +1,7 @@
 
 import prodb,{
-  bulkcreate
+  bulkcreate,
+  getData
 } from "./module.js";
 
 let db = prodb("Productdb", {
@@ -18,23 +19,26 @@ const btnupdate=document.getElementById(" btn-update");
 const btndelete=document.getElementById("btn-delete");
 
 //insert value using create button
-btncreate.onclick=event=>{
- let flag= bulkcreate(db.products,{
+btncreate.onclick= async event=>{
+ let flag=  await bulkcreate(db.products, {
     name: proname.value,
     seller: seller.value,
     price: price.value
-  })
-  console.log(flag);
+  });
+  // console.log(flag);
 
   /*proname.value="";
   seller.value="";
   price.value="";
   */
- proname.value=seller.value=price.value="",
- getData(db.products,(data)=>{
-  userid.value=data.id+1||1;
- });
-}
+ proname.value = seller.value = price.value = "";
+
+ getData(db.products, data=> {
+  userid.value = data.id+1 || 1;
+
+  
+ }); 
+};
 
 
 // Notes:
