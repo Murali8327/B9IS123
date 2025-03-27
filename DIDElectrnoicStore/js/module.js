@@ -68,6 +68,12 @@ const getData=(dbtable,fn)=>{
     }
      return obj;
   }
+  //create dynamic elements
+  const createEle=(tagname,appendTo,fn)=>{
+    const create=document.createElement(tagname);
+    if(appendTo)appendTo.appendChild(element);
+    if(fn)fn(element);
+  }
   
 //check textbox validation
 const empty=object=>{
@@ -87,5 +93,6 @@ const empty=object=>{
 export default productdb;
 export{
     bulkcreate,
-    getData
+    getData,
+    createEle
 }

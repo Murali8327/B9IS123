@@ -1,7 +1,8 @@
 
 import prodb,{
   bulkcreate,
-  getData
+  getData,
+  createEle
 } from "./module.js";
 
 let db = prodb("Productdb", {
