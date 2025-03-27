@@ -70,7 +70,7 @@ const getData=(dbtable,fn)=>{
   }
   //create dynamic elements
   const createEle=(tagname,appendTo,fn)=>{
-    const create=document.createElement(tagname);
+    const element=document.createElement(tagname);
     if(appendTo)appendTo.appendChild(element);
     if(fn)fn(element);
   }
@@ -95,4 +95,4 @@ export{
     bulkcreate,
     getData,
     createEle
-}
+}  

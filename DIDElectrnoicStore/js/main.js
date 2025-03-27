@@ -45,10 +45,10 @@ btnread.onclick=table;
 
 function table(){
   const tbody=document.getElementById("tbody");
-  let td=document.createElement("td");
-  console.log(tbody);
-  tbody.appendChild(td);
-  console.log(td);
+  createEle("td",tbody,(td)=>{
+    console.log(td);
+    console.log(tbody);
+  })
 }
 
 // Notes:
@@ -58,6 +58,11 @@ function table(){
 // Snake cae : btn_create
 // kebab case : btn-create
 // snakeupper : btn_Create
+
+//let td=document.createElement("td");
+//console.log(tbody);
+//tbody.appendChild(td);
+//console.log(td); (created td using java script)
 
 
 
