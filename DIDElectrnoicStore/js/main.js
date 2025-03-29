@@ -45,6 +45,10 @@ btnread.onclick=table;
 
 function table(){
   const tbody=document.getElementById("tbody");
+  
+  while(tbody.hasChildNodes()){
+    tbody.removeChild(tbody.firstChild);
+  }
 
   getData(db.products,(data)=>{
     if(data){
