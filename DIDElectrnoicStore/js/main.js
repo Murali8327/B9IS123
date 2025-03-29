@@ -45,7 +45,7 @@ btnread.onclick=table;
 
 function table(){
   const tbody=document.getElementById("tbody");
-  
+
   while(tbody.hasChildNodes()){
     tbody.removeChild(tbody.firstChild);
   }
@@ -66,6 +66,8 @@ function table(){
           createEle("td",tr,td=>{
             createEle("i",td,i=>{
               i.className+="fas fa-edit btnedit";
+
+              i.onclick=editbtn;
             })
           })
         createEle("td",tr,td=>{
@@ -76,6 +78,10 @@ function table(){
       })
     }
   })
+}
+function editbtn(event){
+  console.log(event.target);
+
 }
 
 // Notes:
