@@ -66,7 +66,7 @@ function table(){
           createEle("td",tr,td=>{
             createEle("i",td,i=>{
               i.className+="fas fa-edit btnedit";
-
+              i.setAttribute('data-id',data.id);
               i.onclick=editbtn;
             })
           })
