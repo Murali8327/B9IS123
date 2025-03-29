@@ -64,7 +64,11 @@ function table(){
               i.className+="fas fa-edit btnedit";
             })
           })
-        
+        createEle("td",tr,td=>{
+          createEle("i",td,i=>{
+            i.className+="fas fa-trash-alt btndelete";
+          })
+        })
       })
     }
   })
