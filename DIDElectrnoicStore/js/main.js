@@ -59,6 +59,11 @@ function table(){
           })
 
           }
+          createEle("td",tr,td=>{
+            createEle("i",td,i=>{
+              i.className+="fas fa-edit btnedit";
+            })
+          })
         
       })
     }
