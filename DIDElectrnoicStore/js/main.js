@@ -80,7 +80,11 @@ function table(){
   })
 }
 function editbtn(event){
-  console.log(event.target);
+  db.products.get(1,data=>{
+    console.log(data);
+
+  })
+  
 
 }
 
