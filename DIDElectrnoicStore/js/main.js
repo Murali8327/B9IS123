@@ -80,10 +80,11 @@ function table(){
   })
 }
 function editbtn(event){
-  console.log(event.target.dataset.id);
-  let id=event.target.dataset.id;
-  console.log(typeofid);
-  db.products.get(1,data=>{
+  
+  let id=parseInt(event.target.dataset.id);
+  
+  db.products.get(id,data=>{
+    console.log(data);
     
 
   })
