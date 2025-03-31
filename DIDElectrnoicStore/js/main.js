@@ -84,12 +84,12 @@ function editbtn(event){
   let id=parseInt(event.target.dataset.id);
   
   db.products.get(id,data=>{
-    console.log(data);
+    userid.value=data.id||0;
+    proname.value=data.name||"";
+    seller.value=data.seller||"";
+    price.value=data.price||""
     
-
   })
-  
-
 }
 
 // Notes:
