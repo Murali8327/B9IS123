@@ -43,6 +43,12 @@ btncreate.onclick= async event=>{
 //create event on btn read button
 btnread.onclick=table;
 
+//update event
+btnupdate.onclick=()=>{
+  const id=parseInt(userid.value||0);
+  
+}
+
 function table(){
   const tbody=document.getElementById("tbody");
 
