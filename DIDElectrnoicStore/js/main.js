@@ -44,7 +44,7 @@ btncreate.onclick= async event=>{
 btnread.onclick=table;
 
 //update event
-btnupdate.onclick=()=>{
+btnupdate.onclick = ()=>{
   const id=parseInt(userid.value||0);
   if(id){
     db.products.updates(id,{
@@ -52,7 +52,7 @@ btnupdate.onclick=()=>{
       seller:seller.value,
       price:price.value
     }).then((updated)=>{
-      let get=updated?'data Updated'
+      let get=updated?'data Updated':'data is not Updated'
       console.log(get);
 
     })
