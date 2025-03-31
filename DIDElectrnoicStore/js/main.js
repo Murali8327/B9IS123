@@ -46,7 +46,17 @@ btnread.onclick=table;
 //update event
 btnupdate.onclick=()=>{
   const id=parseInt(userid.value||0);
-  
+  if(id){
+    db.products.updates(id,{
+      name:proname.value,
+      seller:seller.value,
+      price:price.value
+    }).then((updated)=>{
+      let get=updated?'data Updated'
+      console.log(get);
+
+    })
+  }
 }
 
 function table(){
