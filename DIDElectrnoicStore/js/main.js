@@ -16,7 +16,7 @@ const price=document.getElementById("price");
 //buttons
 const btncreate=document.getElementById("btn-create");
 const btnread=document.getElementById("btn-read");
-const btnupdate=document.getElementById(" btn-update");
+const btnupdate=document.getElementById("btn-update");
 const btndelete=document.getElementById("btn-delete");
 
 //insert value using create button
@@ -44,10 +44,10 @@ btncreate.onclick= async event=>{
 btnread.onclick=table;
 
 //update event
-btnupdate.onclick = ()=>{
+btnupdate.onclick=()=>{
   const id=parseInt(userid.value||0);
   if(id){
-    db.products.updates(id,{
+    db.products.update(id,{
       name:proname.value,
       seller:seller.value,
       price:price.value
