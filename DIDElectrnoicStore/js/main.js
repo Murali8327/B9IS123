@@ -59,6 +59,11 @@ btnupdate.onclick=()=>{
   }
 }
 
+//delete records
+btndelete.onclick=()=>{
+  db.delete();
+}
+
 function table(){
   const tbody=document.getElementById("tbody");
 
