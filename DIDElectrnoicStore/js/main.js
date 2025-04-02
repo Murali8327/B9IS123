@@ -89,6 +89,8 @@ function table(){
         createEle("td",tr,td=>{
           createEle("i",td,i=>{
             i.className+="fas fa-trash-alt btndelete";
+            i.setAttribute('data-id',data-id);
+            i.onclick=deletebtn;
           })
         })
       })
