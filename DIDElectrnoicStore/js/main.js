@@ -109,6 +109,11 @@ function editbtn(event){
     
   })
 }
+function deletebtn(event){
+  let id=parseInt(event.target.dataset.id);
+  db.products.delete(id);
+  table();
+}
 
 // Notes:
 
