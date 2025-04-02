@@ -89,7 +89,7 @@ function table(){
         createEle("td",tr,td=>{
           createEle("i",td,i=>{
             i.className+="fas fa-trash-alt btndelete";
-            i.setAttribute('data-id',data-id);
+            i.setAttribute('data-id',data.id);
             i.onclick=deletebtn;
           })
         })
@@ -109,8 +109,17 @@ function editbtn(event){
     
   })
 }
-function deletebtn(event){
-  let id=parseInt(event.target.dataset.id);
+// function deletebtn(event){
+//   let id=parseInt(event.target.dataset.id);
+//   db.products.delete(id);
+//   table();
+// }
+
+
+
+
+const deletebtn = event => {
+  let id = parseInt(event.target.dataset.id);
   db.products.delete(id);
   table();
 }
