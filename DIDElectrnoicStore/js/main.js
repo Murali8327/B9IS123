@@ -116,8 +116,6 @@ function editbtn(event){
 // }
 
 
-
-
 const deletebtn = event => {
   let id = parseInt(event.target.dataset.id);
   db.products.delete(id);
