@@ -60,8 +60,13 @@ btnupdate.onclick=()=>{
 }
 
 //delete records
-btndelete.onclick=()=>{
+btndelete.onclick = ()=>{
   db.delete();
+  db = prodb("Productdb",{
+    products:`++id,name,seller,price`
+  });
+  db.open();
+  table();
 }
 
 function table(){
@@ -114,11 +119,7 @@ function editbtn(event){
     
   })
 }
-// function deletebtn(event){
-//   let id=parseInt(event.target.dataset.id);
-//   db.products.delete(id);
-//   table();
-// }
+
 
 
 const deletebtn = event => {
