@@ -68,7 +68,15 @@ btndelete.onclick = ()=>{
   db.open();
   table();
 }
-
+//window onload event
+window.onload=()=>{
+  textID(userid);
+}
+function textID(textid){
+  getData(db.products,data=>{
+    textboxid.value=data.id+1||1;
+  })
+}
 function table(){
   const tbody=document.getElementById("tbody");
 
