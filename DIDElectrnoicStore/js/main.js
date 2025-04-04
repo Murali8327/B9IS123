@@ -19,6 +19,9 @@ const btnread=document.getElementById("btn-read");
 const btnupdate=document.getElementById("btn-update");
 const btndelete=document.getElementById("btn-delete");
 
+//notfound
+const notfound = document.getElementById("notfound");
+
 //insert value using create button
 btncreate.onclick= async event=>{
  let flag=  await bulkcreate(db.products, {
@@ -109,11 +112,13 @@ function table(){
             i.className+="fas fa-trash-alt btndelete";
             i.setAttribute('data-id',data.id);
             i.onclick=deletebtn;
-          })
+          });
         })
       })
     }
   })
+} else {
+  notfound.textContent="No records in the database...!";
 }
 function editbtn(event){
   
