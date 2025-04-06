@@ -42,6 +42,8 @@ getData(db.products, data=> {
 
 table();
 let insertmsg = document.querySelector(".insertmsg");
+
+getMsg(flag,insertmsg);
 }
 //create event on btn read button
 btnread.onclick=table;
@@ -142,6 +144,21 @@ const deletebtn = event => {
   let id = parseInt(event.target.dataset.id);
   db.products.delete(id);
   table();
+}
+
+function getMsg(flag,element){
+  if(flag){
+    element.className+="movedown";
+
+    setTimeout(()=>{
+      element.classList.forEach(classname=>{
+        classname=="movedown"?undefined:element.classList.remove("movedown");
+      });
+    },4000);
+
+
+     
+  }
 }
 
 // Notes:

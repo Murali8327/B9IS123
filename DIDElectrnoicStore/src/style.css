@@ -37,6 +37,9 @@ table .btndelete {
 .deletemsg{
     position:absolute;
     top:-40px;  
+    
+}
+.movedown{
     animation:slideup 3.4s ease;
 }
 
