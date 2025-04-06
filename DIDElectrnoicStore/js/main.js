@@ -57,8 +57,11 @@ btnupdate.onclick=()=>{
       seller:seller.value,
       price:price.value
     }).then((updated)=>{
-      let get=updated?'data Updated':'data is not Updated'
-      console.log(get);
+     // let get=updated?'data Updated':'data is not Updated'//
+     // console.log(get);//
+     let get = updated ? true : false;
+     let updatemsg = document.querySelector(".updatemsg");
+     getMsg(get,updatemsg);
 
     })
   }
@@ -146,15 +149,15 @@ const deletebtn = event => {
   table();
 }
 
-function getMsg(flag,element){
+function getMsg(flag,element) {
   if(flag){
-    element.className+="movedown";
+    element.className += "movedown";
 
-    setTimeout(()=>{
+    setTimeout(()=> {
       element.classList.forEach(classname=>{
-        classname=="movedown"?undefined:element.classList.remove("movedown");
+        classname == "movedown" ? undefined : element.classList.remove('movedown');
       });
-    },4000);
+    }, 4000);
 
 
      
