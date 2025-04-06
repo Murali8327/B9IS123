@@ -36,12 +36,12 @@ btncreate.onclick= async event=>{
   price.value="";
   */
  proname.value = seller.value = price.value = "";
-
- getData(db.products, data=> {
+getData(db.products, data=> {
   userid.value = data.id+1 || 1;
+}); 
 
-  
- }); 
+table();
+let insertmsg = document.querySelector(".insertmsg");
 }
 //create event on btn read button
 btnread.onclick=table;
@@ -118,7 +118,7 @@ function table(){
     
   
 } else {
-  notfound.textContent="No records in the database...!";
+  notfound.textContent="No records found in the database...!";
 }
 
   });
