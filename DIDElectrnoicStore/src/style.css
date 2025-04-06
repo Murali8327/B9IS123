@@ -30,3 +30,21 @@ table .btndelete {
     color: tomato;
     cursor: pointer;
 }
+
+/* messages*/
+.insertmsg,
+.updatemsg,
+.deletemsg{
+    position:absolute;
+    top:-40px;  
+    animation:slideup 3.4s ease;
+}
+
+@keyframes slideup{
+    50%{
+        top:0;
+    }
+    100%{
+        top:-40px;
+    }
+}
