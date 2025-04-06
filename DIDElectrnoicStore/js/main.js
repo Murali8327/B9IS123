@@ -62,7 +62,8 @@ btnupdate.onclick=()=>{
      let get = updated ? true : false;
      let updatemsg = document.querySelector(".updatemsg");
      getMsg(get,updatemsg);
-
+     
+     proname.value = seller.value = price.value = "";
     })
   }
 }
@@ -75,8 +76,9 @@ btndelete.onclick = ()=>{
   });
   db.open();
   table();
+  textID(userid);
 
-  let deletemsg = document.querySelector(".delete");
+  let deletemsg = document.querySelector(".deletemsg");
   getMsg(true,deletemsg);
 }
 //window onload event
