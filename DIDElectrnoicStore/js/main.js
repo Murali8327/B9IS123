@@ -114,11 +114,14 @@ function table(){
             i.onclick=deletebtn;
           });
         })
-      })
-    }
-  })
+      });
+    
+  
 } else {
   notfound.textContent="No records in the database...!";
+}
+
+  });
 }
 function editbtn(event){
   
