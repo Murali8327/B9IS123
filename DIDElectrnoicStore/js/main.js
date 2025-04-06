@@ -75,6 +75,9 @@ btndelete.onclick = ()=>{
   });
   db.open();
   table();
+
+  let deletemsg = document.querySelector(".delete");
+  getMsg(true,deletemsg);
 }
 //window onload event
 window.onload=()=>{
@@ -149,14 +152,14 @@ const deletebtn = event => {
   table();
 }
 
-function getMsg(flag,element) {
-  if(flag){
-    element.className += "movedown";
+function getMsg(flag, element) {
+  if (flag){
+    element.className += " movedown";
 
     setTimeout(()=> {
       element.classList.forEach(classname=>{
-        classname == "movedown" ? undefined : element.classList.remove('movedown');
-      });
+        classname == "movedown" ? undefined : element.classList.remove("movedown");
+      })
     }, 4000);
 
 
