@@ -1,5 +1,5 @@
 
-
+// USed to create Table in the Database
 const productdb = (dbname, table)=>{
 //     const db = new Dexie('myDB');
 // db.version(1).stores({
