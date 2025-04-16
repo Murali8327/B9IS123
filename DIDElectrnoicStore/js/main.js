@@ -1,4 +1,3 @@
-
 import prodb,{
   bulkcreate,
   getData,
@@ -105,7 +104,7 @@ function table(){
         for(const value in data){
 
           createEle("td",tr,td=>{
-            td.textContent=data.price===data[value]?`$${data[value]}`:data[value];
+            td.textContent=data.price===data[value]?`€ ${data[value]}`:data[value];
 
           })
 
@@ -181,6 +180,3 @@ function getMsg(flag, element) {
 //console.log(tbody);
 //tbody.appendChild(td);
 //console.log(td); (created td using java script)
-
-
-
