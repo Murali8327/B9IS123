@@ -26,6 +26,7 @@ return db;
 //insert function
 const bulkcreate =(dbtable,data)=>{
     // dbtable.bulkAdd([data]);
+    // flag is used to check boolean value
     let flag = empty(data);
     if(flag){
         dbtable.bulkAdd([data]);
