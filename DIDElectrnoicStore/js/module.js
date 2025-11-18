@@ -1,19 +1,19 @@
 // USed to create Table in the Database
 const productdb = (dbname, table)=>{
-  //     const db = new Dexie('myDB');
-  // db.version(1).stores({
-  //     friends: '++id, name, age' // Fixed schema definition
-  // });
+       const db = new Dexie('myDB');
+  db.version(1).stores({
+       friends: '++id, name, age' // Fixed schema definition
+   });
   
-  // // Open database
-  // db.open().catch(err => {
-  //     console.error("Failed to open DB:", err);
-  // });
+   // Open database
+  db.open().catch(err => {
+       console.error("Failed to open DB:", err);
+   });
   
-  // // Add data to test if it works 
-  // db.friends.put({ name: 'John', age: 25 }).then(() => {
-  //     console.log("Data added successfully!");
-  // });
+  // Add data to test if it works
+   db.friends.put({ name: 'John', age: 25 }).then(() => {
+       console.log("Data added successfully!");
+   });
   
   const db = new Dexie(dbname);
   db.version(1).stores(table);
@@ -24,7 +24,7 @@ const productdb = (dbname, table)=>{
   }
   //insert function
   const bulkcreate =(dbtable,data)=>{
-      // dbtable.bulkAdd([data]);
+       dbtable.bulkAdd([data]);
       // flag is used to check boolean value
       let flag = empty(data);
       if(flag){
